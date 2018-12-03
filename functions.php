@@ -33,3 +33,22 @@ foreach ( $understrap_includes as $file ) {
 	}
 	require_once $filepath;
 }
+
+// Add Solutions as a custom post type
+function create_posttype() {
+ 
+    register_post_type( 'nr_solutions',
+    // CPT Options
+        array(
+            'labels' => array(
+                'name' => __( 'Solutions' ),
+                'singular_name' => __( 'Solution' )
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'rewrite' => array('slug' => 'nr_solutions'),
+        )
+    );
+}
+// Hooking up our function to theme setup
+add_action( 'init', 'create_posttype' );

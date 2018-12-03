@@ -1,0 +1,1 @@
+jQuery(document).ready(function(s){var n=[],a=[],e=[];s(".nr_solutions").each(function(o,t){n.push(s(this).data("context")),a.push(s(this).data("method")),e.push(s(this).data("bias"))}),console.log(n),console.log(a),console.log(e)});
