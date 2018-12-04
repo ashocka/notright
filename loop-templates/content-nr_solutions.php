@@ -41,7 +41,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 		'</a></h2>' ); ?>
 
 		<?php //development
-		the_field('context'); ?>
+		the_field('context');
+		the_field('method');
+		the_field('bias');
+		?>
 
 		<?php if ( 'post' == get_post_type() ) : ?>
 

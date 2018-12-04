@@ -1,5 +1,7 @@
 jQuery(document).ready(function( $ ) {
 
+// generate dropdowns from available data attributes
+
 	var allContext = [];
 	var allMethod = [];
 	var allBias = [];
@@ -41,56 +43,66 @@ jQuery(document).ready(function( $ ) {
         $('select#bias').append('<option value="' + val + '">' + val + '</option>');
     })
 
-    // filtering functionality
-
-    // get all selected values. this only works if all attributes accross all dropdowns are different
+// filtering functionality (this only works if all attributes accross all dropdowns are different)
 
     var selected = [];
-   
+    $(".nr_solutions").hide();
 
     $("select").change(function() {
+    $(".nr_solutions").hide();
 
     	// get all selected values
 
-	    	selected = [];
+		selected = [];
 
-	    	$(".main-select-form select").each(function() {
+	    $(".main-select-form select").each(function() {
+	    	if ($(this).val() !== ""){
 	    		selected.push($(this).val());
-	    	});
+	    	}
+	    });
+	 
+	if (selected.length === 3) { // this run only if you have all three dropdown values
 
-	    	// TODO output only when all three are not empty
+		// get all element values
+		var allAttributes = [];
 
-	    	// TODO if selected.length === 3 :
+		$(".nr_solutions").each(function(i, obj) {
+		    allAttributes = [];
 
-	    // get all element values
-	    	var allAttributes = [];
+		    var thisContext = $(this).data("context");
+			var thisMethod = $(this).data("method");
+			var thisBias = $(this).data("bias");
 
-			$(".nr_solutions").each(function(i, obj) {
-	    		allAttributes = [];
+			allAttributes = thisContext.concat(thisMethod).concat(thisBias);
 
-	    		var thisContext = $(this).data("context");
-				var thisMethod = $(this).data("method");
-				var thisBias = $(this).data("bias");
+					function superbag(sup, sub) {
+					    sup.sort();
+					    sub.sort();
+					    var i, j;
+					    for (i=0,j=0; i<sup.length && j<sub.length;) {
+					        if (sup[i] < sub[j]) {
+					            ++i;
+					        } else if (sup[i] == sub[j]) {
+					            ++i; ++j;
+					        } else {
+					            // sub[j] not in sup, so sub not subbag
+					            return false;
+					        }
+					    }
+					    // make sure there are no elements left in sub
+					    return j == sub.length;
+					}
 
-				allAttributes = thisContext.concat(thisMethod).concat(thisBias);
-				
-				//pseudocode
-				/*if (allAttributes.includes(selected)) {
-					console.log(this);
-				}*/
+			var result = superbag(allAttributes, selected);
 
-				//development
-				//console.log(allAttributes);
-			});
+			if (result === true) {
+				$(this).show();
+			}
 
+		});
 
-
+	} // end if
 
    	});
-
-
-    $(".nr_solutions").each(function(i, obj) {
-    	//$(this).hide();
-    });
 
 });
