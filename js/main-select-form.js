@@ -46,20 +46,19 @@ jQuery(document).ready(function( $ ) {
 // filtering functionality (this only works if all attributes accross all dropdowns are different)
 
     var selected = [];
-    $(".nr_solutions").hide();
+    	$(".nr_solutions").hide();
 
     $("select").change(function() {
-    $(".nr_solutions").hide();
+    	$(".nr_solutions").hide();
 
-    	// get all selected values
+    // get all selected values together
+	selected = [];
 
-		selected = [];
-
-	    $(".main-select-form select").each(function() {
-	    	if ($(this).val() !== ""){
-	    		selected.push($(this).val());
-	    	}
-	    });
+	$(".main-select-form select").each(function() {
+	    if ($(this).val() !== ""){
+	    	selected.push($(this).val());
+	    }
+	});
 	 
 	if (selected.length === 3) { // this run only if you have all three dropdown values
 
@@ -104,5 +103,14 @@ jQuery(document).ready(function( $ ) {
 	} // end if
 
    	});
+
+// reporting functionality
+
+$(".wpcf7-form").find(".wpcf7-submit").click(function(){
+	console.log(selected);
+	$("#hidden-context").val(selected);
+});
+
+
 
 });

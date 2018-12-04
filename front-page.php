@@ -20,7 +20,7 @@ get_header();
 $container   = get_theme_mod( 'understrap_container_type' );
 ?>
 
-<div class="wrapper" id="index-wrapper">
+<div class="wrapper container" id="index-wrapper">
 
 	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
 
@@ -44,6 +44,29 @@ $container   = get_theme_mod( 'understrap_container_type' );
 					. Na koga se lahko obrnem?
 				</div>
 
+				<div class="reporting-module row">
+					<div class="col-12 col-md-6">
+					<h2>Report</h2>
+					<p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</p>
+					<p>
+					Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					</div>
+					<div class="col-12 col-md-6">
+			<?php
+
+			echo do_shortcode( '[contact-form-7 id="5" title="Report-Step-1"]' );
+
+			echo "<script>
+						document.addEventListener( 'wpcf7mailsent', function( event ) {
+						    location = '" . get_site_url() . "/report-step-2';
+						}, false );
+					</script>";
+			?>
+						<div class="privacy-notice">
+							<p>Poslali boste anonimne informacije o dogodku. Zabeležili bomo tudi vašo izbiro v zgornjem obrazcu (prostor, metoda, bias).</p>
+						</div>
+					</div>
+				</div>
 
 
 			<?php
