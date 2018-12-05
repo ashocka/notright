@@ -776,6 +776,13 @@
 		"oAP": "/page-templates/left-sidebarpage.php",
 		"oF": 0
 		},
+	"/page-templates/report-step-2.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/page-templates/report-step-2.php",
+		"oF": 0
+		},
 	"/page-templates/right-sidebarpage.php": {
 		"cB": 0,
 		"ft": 8192,

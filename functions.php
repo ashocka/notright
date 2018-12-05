@@ -52,3 +52,10 @@ function create_posttype() {
 }
 // Hooking up our function to theme setup
 add_action( 'init', 'create_posttype' );
+
+
+// shortcode to display the previously submitted info on the Report Step 2
+function nr_submitted_info_shortcode() {
+   echo '<div class="submitted-info"></div>';
+}
+add_shortcode( 'submitted', 'nr_submitted_info_shortcode' );

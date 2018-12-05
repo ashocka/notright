@@ -108,8 +108,17 @@ jQuery(document).ready(function( $ ) {
 
 $(".wpcf7-form").find(".wpcf7-submit").click(function(){
 	console.log(selected);
+
+	// not the best: same number could be generated twice
+	// try adding current time
+	var reportId = Math.floor(Math.random() * (999999-100000) + 100000);
+
 	$("#hidden-context").val(selected);
+	$("#hidden-reportid").val(reportId);
+
+	sessionStorage.setItem("reportIds", reportId);
 });
+
 
 
 
