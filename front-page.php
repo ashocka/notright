@@ -1,6 +1,6 @@
 <?php
 /**
- * The home template.
+ * Template Name: Front Page
  *
  * This is the most generic template file in a WordPress theme
  * and one of the two required files for a theme (the other being style.css).
@@ -20,15 +20,16 @@ get_header();
 $container   = get_theme_mod( 'understrap_container_type' );
 ?>
 
-<div class="wrapper container" id="index-wrapper">
+<div class="wrapper" id="index-wrapper">
 
-	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
-
-		<div class="row">
+	<div class="" id="content" tabindex="-1">
 
 			<main class="site-main" id="main">
 
-				<div class="main-select-form">
+<div class="bg-primary main-select-form-container">
+<div class="container">
+<div class="row">
+				<div class="main-select-form col-12">
 					V/Na
 					<select id="context" autofocus>
 						<option value="" selected="selected">Izberite kontekst</option>
@@ -43,15 +44,20 @@ $container   = get_theme_mod( 'understrap_container_type' );
 					</select>
 					. Na koga se lahko obrnem?
 				</div>
+</div>
+</div>
+</div>
 
-				<div class="reporting-module row">
-					<div class="col-12 col-md-6">
+<div class="container">
+		<div class="reporting-module-container">
+				<div class="reporting-module row justify-content-center">
+					<div class="col-10 col-md-5">
 					<h2>Report</h2>
 					<p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</p>
 					<p>
 					Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 					</div>
-					<div class="col-12 col-md-6">
+					<div class="col-10 col-md-4 offset-md-1">
 			<?php
 
 			echo do_shortcode( '[contact-form-7 id="5" title="Report-Step-1"]' );
@@ -62,12 +68,15 @@ $container   = get_theme_mod( 'understrap_container_type' );
 						}, false );
 					</script>";
 			?>
-						<div class="privacy-notice">
+						<div class="privacy-notice smol">
 							<p>Poslali boste anonimne informacije o dogodku. Zabeležili bomo tudi vašo izbiro v zgornjem obrazcu (prostor, metoda, bias).</p>
 						</div>
 					</div>
 				</div>
+</div>
 
+<div class="container solutions-container">
+<div class="row justify-content-between">
 
 			<?php
 			$args = array('post_type' => 'nr_solutions');
@@ -92,15 +101,50 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
 				<?php wp_reset_postdata(); ?>
 
-			</main><!-- #main -->
+			
 
 			<!-- The pagination component -->
 			<?php understrap_pagination(); ?>
-		
+</div>
 
-	</div><!-- .row -->
 
-</div><!-- Container end -->
+<div class="row">
+
+			<div class="col-12 col-sm-6 offset-sm-6">
+					<?php while ( have_posts() ) : the_post(); ?>
+
+	<header class="homepage-header">
+
+		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+
+	</header><!-- .entry-header -->
+
+	<div class="homepage-content">
+
+		<?php the_content(); ?>
+
+		<?php
+		wp_link_pages( array(
+			'before' => '<div class="page-links">' . __( 'Pages:', 'understrap' ),
+			'after'  => '</div>',
+		) );
+		?>
+
+	</div><!-- .entry-content -->
+
+					<?php endwhile; // end of the loop. ?>
+			
+			</div><!-- #primary -->
+
+		</div><!-- .row -->
+</div>
+
+</main><!-- #main -->
+	</div><!-- Container end -->
+
+	
+
+</div>
 
 </div><!-- Wrapper end -->
 

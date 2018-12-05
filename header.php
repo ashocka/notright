@@ -23,22 +23,32 @@ $container = get_theme_mod( 'understrap_container_type' );
 	<meta name="apple-mobile-web-app-title" content="<?php bloginfo( 'name' ); ?> - <?php bloginfo( 'description' ); ?>">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+	<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:700|Source+Sans+Pro:400,700&amp;subset=latin-ext" rel="stylesheet">
 	<?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
 
 <div class="site" id="page">
+	<div class="container privacy-top-notice smol bg-primary">
+		<div class="row justify-content-center">
+			<div class="col-1">icon</div>
+			<div class="col-6">
+			Uporaba te spletne strani je anonimna. Zbiramo anonimno statistiko o uporabi. Noben osebni podatek se ne shranjuje, razen, če se za to izrecno odločite.
+			</div>
+			<div class="col-3"><a href="#">Preberite več o tem, kako skrbimo za podatke</a></div>
+		</div>
+	</div>
 
 	<!-- ******************* The Navbar Area ******************* -->
 	<div id="wrapper-navbar" itemscope itemtype="http://schema.org/WebSite">
 
 		<a class="skip-link sr-only sr-only-focusable" href="#content"><?php esc_html_e( 'Skip to content', 'understrap' ); ?></a>
 
-		<nav class="navbar navbar-expand-md navbar-dark bg-primary">
+		<nav class="navbar navbar-expand-md navbar-light">
 
 		<?php if ( 'container' == $container ) : ?>
-			<div class="container" >
+			<div class="container">
 		<?php endif; ?>
 
 					<!-- Your site title as branding in the menu -->

@@ -1,4 +1,4 @@
-@import url('theme-blessed1.css?z=1543833583089');
+@import url('theme-blessed1.css?z=1544039855135');
 
 
 .sticky,
@@ -67,7 +67,7 @@ a.skip-link {
   .navbar-dark .navbar-nav .dropdown-menu .nav-link.active, .navbar-dark .navbar-nav .dropdown-menu .nav-link:active {
     color: #fff !important;
     text-decoration: none;
-    background-color: #5533ff; }
+    background-color: #333; }
   .navbar-dark .navbar-nav .dropdown-menu .nav-link.disabled, .navbar-dark .navbar-nav .dropdown-menu .nav-link:disabled {
     color: #6c757d !important;
     background-color: transparent; }
@@ -84,6 +84,97 @@ a.skip-link {
 
 .navbar h1 {
   font-weight: 400; }
+
+.red {
+  background-color: red; }
+
+body, body p {
+  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif; }
+
+a {
+  text-decoration: underline; }
+
+.smol {
+  font-size: .9rem; }
+
+h1, h2, h3, h4, .navbar-brand {
+  font-family: "Source Code Pro", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+
+.navbar-brand {
+  font-size: 2rem; }
+
+h5 {
+  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+  font-weight: 800;
+  font-size: 1rem; }
+
+.privacy-top-notice {
+  padding: 1rem 0; }
+
+.bg-primary, .bg-primary a {
+  color: #fff; }
+
+.wrapper {
+  padding: 0; }
+
+.navbar {
+  padding: 2rem 1rem; }
+  .navbar .container {
+    padding: 0; }
+
+.nav-link {
+  padding: 0; }
+
+.navbar-expand-md .navbar-nav .nav-link {
+  color: #333;
+  text-transform: lowercase; }
+
+.nav-item {
+  padding: 0 2rem; }
+  .nav-item:last-of-type {
+    padding-right: 0; }
+
+.main-select-form-container {
+  padding: 2rem 0; }
+
+.main-select-form {
+  font-size: 2rem;
+  line-height: 4rem;
+  font-family: "Source Code Pro", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+
+.reporting-module-container {
+  background-color: #FDFDFD;
+  padding: 3rem 0; }
+
+select {
+  border: 0;
+  border-bottom: 3px solid;
+  background: transparent;
+  border-radius: 0px;
+  -webkit-appearance: none;
+  height: 3.5rem; }
+
+.main-select-form select {
+  color: #fff;
+  border-bottom: 3px solid #fff; }
+
+.wpcf7-submit {
+  background-color: #6f42c1;
+  font-family: "Source Code Pro", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+
+.solutions-container {
+  padding: 0;
+  margin-top: 3rem; }
+
+.solution .entry-header {
+  padding: 3rem; }
+
+.solution .entry-content {
+  padding: 3rem; }
+
+#wrapper-footer {
+  padding: 3rem 0;
+  margin-top: 3rem; }
 
 /*
 * Use existing Bootstrap 4 classes and

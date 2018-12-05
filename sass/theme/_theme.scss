@@ -1,1 +1,148 @@
 // This is an empty scss file for your custom styles - Please add your super duper awesome mega design styles here
+
+//development
+.red {
+	background-color:red;
+}
+
+body, body p {
+	font-family: $font-family-base;
+}
+
+a {
+	text-decoration:underline;
+}
+
+.smol {
+	font-size: .9rem;
+}
+
+h1, h2, h3, h4, .navbar-brand {
+	font-family: $font-family-monospace;
+}
+
+.navbar-brand {
+	font-size: 2rem;
+}
+
+h5 {
+	font-family: $font-family-base;
+	font-weight:800;
+	font-size:$font-size-base;
+}
+
+.privacy-top-notice {
+	padding: 1rem 0;
+}
+
+.bg-primary, .bg-primary a {
+	color:$white;
+}
+
+.wrapper {
+	padding:0;
+}
+
+.navbar {
+	padding: 2rem 1rem;
+
+	.container {
+		padding: 0;
+	}
+}
+
+.nav-link {padding:0;}
+
+.navbar-expand-md .navbar-nav .nav-link {
+	color:$primary;
+	text-transform:lowercase;
+}
+
+.nav-item {
+	padding: 0 2rem;
+
+	&:last-of-type {
+		padding-right: 0;
+	}
+}
+
+.main-select-form-container {
+	padding: 2rem 0;
+}
+
+.main-select-form {
+	font-size: 2rem;
+    line-height: 4rem;
+	font-family: $font-family-monospace;
+}
+
+.reporting-module-container {
+	background-color: #FDFDFD;
+	padding: 3rem 0;
+}
+
+select {
+	border: 0;
+    border-bottom: 3px solid;
+    background: transparent;
+    border-radius: 0px;
+    -webkit-appearance: none;
+    height: 3.5rem;
+}
+
+.main-select-form select{
+	color: $white;
+	border-bottom: 3px solid $white;
+}
+
+.wpcf7-submit {
+	background-color: $purple;
+	font-family: $font-family-monospace;
+}
+
+.solutions-container {
+	padding:0;
+	margin-top: 3rem;
+}
+
+.solution {
+
+	.entry-header {
+		padding: 3rem;
+	}
+
+	.entry-content {
+		padding: 3rem;
+	}
+}
+
+#wrapper-footer {
+	padding:3rem 0;
+	margin-top: 3rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

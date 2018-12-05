@@ -1,5 +1,7 @@
 jQuery(document).ready(function( $ ) {
 
+	$(".reporting-module-container").hide();
+
 // generate dropdowns from available data attributes
 
 	var allContext = [];
@@ -97,6 +99,8 @@ jQuery(document).ready(function( $ ) {
 			if (result === true) {
 				$(this).show();
 			}
+
+			$(".reporting-module-container").show();
 
 		});
 

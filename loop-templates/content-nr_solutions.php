@@ -10,6 +10,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 
+<div class="col-12 col-md-6 solution">
 <div <?php post_class(); ?> id="post-<?php the_ID(); ?>"
 
 	<?php
@@ -35,40 +36,38 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 >
 
-	<header class="entry-header">
+	<header class="entry-header bg-primary">
 
-		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ),
-		'</a></h2>' ); ?>
+		<?php the_title( '<h2>', '</h2>' ); ?>
+		<span><?php the_field('kontakt'); ?></span>
+		<span><?php the_field('nivo_privatnosti'); ?></span>
 
+	</header><!-- .entry-header -->
+
+	<div class="entry-content">
+<div class="red">
 		<?php //development
 		the_field('context');
 		the_field('method');
 		the_field('bias');
 		?>
-
-		<?php if ( 'post' == get_post_type() ) : ?>
-
-			<div class="entry-meta">
-				<?php understrap_posted_on(); ?>
-			</div><!-- .entry-meta -->
-
-		<?php endif; ?>
-
-	</header><!-- .entry-header -->
-
-	<?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
-
-	<div class="entry-content">
-
+</div>
 		<?php
-		the_excerpt();
+		the_content();
 		?>
 
 		<?php
-		wp_link_pages( array(
-			'before' => '<div class="page-links">' . __( 'Pages:', 'understrap' ),
-			'after'  => '</div>',
-		) );
+		if (get_field("mozen_rezultat")){
+			echo "<h5>Možen rezultat:</h5><p>";
+			the_field('mozen_rezultat');
+			echo "</p>";
+		}
+
+		if (get_field("naslednji_korak")){
+			echo "<h5>Naslednji korak:</h5><p>";
+			the_field('naslednji_korak');
+			echo "</p>";
+		}
 		?>
 
 	</div><!-- .entry-content -->
@@ -80,3 +79,4 @@ if ( ! defined( 'ABSPATH' ) ) {
 	</footer><!-- .entry-footer -->
 
 </div><!-- #post-## -->
+</div>
