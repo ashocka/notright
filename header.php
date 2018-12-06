@@ -32,11 +32,11 @@ $container = get_theme_mod( 'understrap_container_type' );
 <div class="site" id="page">
 	<div class="container privacy-top-notice smol bg-primary">
 		<div class="row justify-content-center">
-			<div class="col-1">icon</div>
-			<div class="col-6">
+			<div class="col-1 col-sm-1"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/ico-anon_.svg" title="nivo privatnosti" /></div>
+			<div class="col-10 col-sm-6">
 			Uporaba te spletne strani je anonimna. Zbiramo anonimno statistiko o uporabi. Noben osebni podatek se ne shranjuje, razen, če se za to izrecno odločite.
 			</div>
-			<div class="col-3"><a href="#">Preberite več o tem, kako skrbimo za podatke</a></div>
+			<div class="col-11 col-sm-3"><a href="#">Preberite več o tem, kako skrbimo za podatke</a></div>
 		</div>
 	</div>
 

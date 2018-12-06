@@ -24,7 +24,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 				<footer class="row" id="colophon">
 
-					<div class="site-info col-sm-4">
+					<div class="site-info col-12 col-sm-4">
 
 						<?php if ( ! has_custom_logo() ) { ?>
 
@@ -47,7 +47,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 					</div><!-- .site-info -->
 
-					<div class="col-sm-8 partner-logos">
+					<div class="col-sm-8 col-12 partner-logos">
 						<img src="" title="ONE logo" />
 						<img src="" title="and this" />
 						<img src="" title="also this" />

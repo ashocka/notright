@@ -12,31 +12,35 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
-	<header class="entry-header">
+<div class="row">
+						<header class="entry-header col-12 offset-md-4 col-md-8">
 
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+							<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 
-	</header><!-- .entry-header -->
+						</header><!-- .entry-header -->
 
-	<?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
+						
 
-	<div class="entry-content">
+						<div class="entry-content col-12 offset-md-4 col-md-5">
 
-		<?php the_content(); ?>
+							<?php the_content(); ?>
 
-		<?php
-		wp_link_pages( array(
-			'before' => '<div class="page-links">' . __( 'Pages:', 'understrap' ),
-			'after'  => '</div>',
-		) );
-		?>
+							<?php
+							wp_link_pages( array(
+								'before' => '<div class="page-links">' . __( 'Pages:', 'understrap' ),
+								'after'  => '</div>',
+							) );
+							?>
 
-	</div><!-- .entry-content -->
 
-	<footer class="entry-footer">
 
-		<?php edit_post_link( __( 'Edit', 'understrap' ), '<span class="edit-link">', '</span>' ); ?>
+						</div><!-- .entry-content -->
 
-	</footer><!-- .entry-footer -->
+						<?php if( get_the_post_thumbnail( $post->ID ) ) : ?>
+							<footer class="entry-footer col-12 offset-md-4 col-md-8">
+							<?php echo get_the_post_thumbnail( $post->ID ); ?>
+							</footer>
+						<?php endif; ?>
+</div><!-- .row end -->
 
-</article><!-- #post-## -->
+</article>

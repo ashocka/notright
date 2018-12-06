@@ -40,18 +40,28 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 		<?php the_title( '<h2>', '</h2>' ); ?>
 		<span><?php the_field('kontakt'); ?></span>
-		<span><?php the_field('nivo_privatnosti'); ?></span>
+
+		<div class="privacy-level">
+			<?php
+			if (get_field('nivo_zasebnosti')){
+				$a;
+
+				if (get_field('nivo_zasebnosti')=='javno') {
+					$a = "javno";
+				} elseif (get_field('nivo_zasebnosti')=='anonimno') {
+					$a = "anon";
+				} elseif (get_field('nivo_zasebnosti')=='zasebno') {
+					$a = "zasebno";
+				};
+
+				echo "<img src='" . get_stylesheet_directory_uri() . "/img/ico-" . $a . ".svg' />";
+			}	
+			?>
+		</div>
 
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
-<div class="red">
-		<?php //development
-		the_field('context');
-		the_field('method');
-		the_field('bias');
-		?>
-</div>
 		<?php
 		the_content();
 		?>
@@ -72,11 +82,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	</div><!-- .entry-content -->
 
-	<footer class="entry-footer">
-
-		<?php understrap_entry_footer(); ?>
-
-	</footer><!-- .entry-footer -->
 
 </div><!-- #post-## -->
 </div>

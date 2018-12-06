@@ -41,8 +41,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
 					zaradi
 					<select id="bias">
 						<option value="" selected="selected">Izberite bias</option>
-					</select>
-					. Na koga se lahko obrnem?
+					</select>. Na koga se lahko obrnem?
 				</div>
 </div>
 </div>
@@ -50,6 +49,9 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
 <div class="container">
 		<div class="reporting-module-container">
+			<div class="reporting-module-gradient">
+			<a class="open-more" href="javascript:;">Več</a>
+			</div>
 				<div class="reporting-module row justify-content-center">
 					<div class="col-10 col-md-5">
 					<h2>Report</h2>
@@ -108,48 +110,93 @@ $container   = get_theme_mod( 'understrap_container_type' );
 </div>
 
 
-<div class="row">
+<div class="row home-content">
 
-			<div class="col-12 col-sm-6 offset-sm-6">
+	<?php echo "<img src='";
+	echo get_stylesheet_directory_uri();
+	echo "/img/illustration-front-page-02.svg' class='d-none col-sm-4 d-lg-block front-ilustration-01' title='ilustracija osebe, ki govori' />";
+	?>
+
 					<?php while ( have_posts() ) : the_post(); ?>
 
-	<header class="homepage-header">
+	<header class="homepage-header col-12 col-lg-8">
 
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 
 	</header><!-- .entry-header -->
+</div>
 
-	<div class="homepage-content">
+<div class="row home-content">
+<?php echo "<div class='entry-footer front-ilustration-02 d-none col-md-8 d-md-block'><img src='";
+	echo get_stylesheet_directory_uri();
+	echo "/img/illustration-front-page-01.svg' title='ilustracija osebe, ki gleda' /></div>";
+	?>
+
+	<div class="homepage-content col-12 col-md-4">
 
 		<?php the_content(); ?>
-
-		<?php
-		wp_link_pages( array(
-			'before' => '<div class="page-links">' . __( 'Pages:', 'understrap' ),
-			'after'  => '</div>',
-		) );
-		?>
 
 	</div><!-- .entry-content -->
 
 					<?php endwhile; // end of the loop. ?>
 			
-			</div><!-- #primary -->
-
-		</div><!-- .row -->
+</div><!-- .row -->
 </div>
 
 </main><!-- #main -->
 	</div><!-- Container end -->
 
-	
+<style>
+.reporting-module-container {
+	height: 2rem;
+	overflow: hidden;
+}
+.reporting-module-gradient {
+	background-image: linear-gradient(to bottom, #ffffff00 , #ffffff, white);
+    width: 100%;
+    content: " ";
+    height: 150px;
+    background-color: transparent;
+    position: absolute;
+    z-index: 99;
+}
+.reporting-module-gradient .open-more {
+	position: absolute;
+	text-align: center;
+}
+</style>
+
+<script>
+jQuery(document).ready(function( $ ) {
+
+	$('.reporting-module-container').animate({
+    height: $('.reporting-module-container').get(0).scrollHeight
+}, 1000, function(){
+    $(this).height('auto');
+});
+
+	/*$('.open-more').click(function(){
+		$('.reporting-module-container').animate({
+				max-height: '200rem'
+			}, 1000);
+		$('.reporting-module-gradient').animate({
+			opacity: 0
+		}, 200, function() {
+    		$('.reporting-module-container').animate({
+				height: 'auto'
+			}, 300);
+  		});*/
+	});
+});
+</script>
+
 
 </div>
 
 </div><!-- Wrapper end -->
 
 <?php echo "<script type='text/javascript' src='";
-	echo get_stylesheet_directory_uri();
+	//echo get_stylesheet_directory_uri();
 	echo "/js/main-select-form.js'></script>";
 ?>
 

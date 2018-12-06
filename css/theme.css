@@ -1,4 +1,4 @@
-@import url('theme-blessed1.css?z=1544039855135');
+@import url('theme-blessed1.css?z=1544121703928');
 
 
 .sticky,
@@ -88,6 +88,10 @@ a.skip-link {
 .red {
   background-color: red; }
 
+html, body {
+  max-width: 100%;
+  overflow-x: hidden; }
+
 body, body p {
   font-family: "Source Sans Pro", Helvetica, Arial, sans-serif; }
 
@@ -97,15 +101,17 @@ a {
 .smol {
   font-size: .9rem; }
 
-h1, h2, h3, h4, .navbar-brand {
+h4, .navbar-brand {
   font-family: "Source Code Pro", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
 
 .navbar-brand {
   font-size: 2rem; }
 
-h5 {
+h1, h2, h3, h5 {
   font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
-  font-weight: 800;
+  font-weight: 800; }
+
+h5 {
   font-size: 1rem; }
 
 .privacy-top-notice {
@@ -130,7 +136,7 @@ h5 {
   text-transform: lowercase; }
 
 .nav-item {
-  padding: 0 2rem; }
+  padding: .5rem 0; }
   .nav-item:last-of-type {
     padding-right: 0; }
 
@@ -144,7 +150,9 @@ h5 {
 
 .reporting-module-container {
   background-color: #FDFDFD;
-  padding: 3rem 0; }
+  padding: 0 0 3rem; }
+  .reporting-module-container .reporting-module {
+    padding-top: 3rem; }
 
 select {
   border: 0;
@@ -172,9 +180,46 @@ select {
 .solution .entry-content {
   padding: 3rem; }
 
+#content .entry-content {
+  margin-bottom: 3rem; }
+
+#content .entry-footer {
+  margin-bottom: -10rem; }
+
 #wrapper-footer {
-  padding: 3rem 0;
-  margin-top: 3rem; }
+  margin-top: 9rem; }
+  #wrapper-footer .container {
+    padding: 10rem 0 6rem; }
+  #wrapper-footer:before {
+    background-image: url("../img/footer-top.svg");
+    background-repeat: no-repeat;
+    background-position: top center;
+    width: 100%;
+    content: " ";
+    position: absolute;
+    height: 78px;
+    margin-top: -61px;
+    background-color: transparent; }
+
+.page h1 {
+  margin: 3rem 0; }
+
+.page h2 {
+  margin: 2rem 0 1.5rem; }
+
+.page h3 {
+  margin: 2rem 0 1rem; }
+
+.front-ilustration-01 {
+  margin-top: -6rem;
+  z-index: -99; }
+
+.front-ilustration-02 {
+  text-align: center; }
+
+@media (min-width: 576px) {
+  .nav-item {
+    padding: 0 2rem; } }
 
 /*
 * Use existing Bootstrap 4 classes and

@@ -101,6 +101,7 @@ jQuery(document).ready(function( $ ) {
 			}
 
 			$(".reporting-module-container").show();
+			$(".home-content").hide();
 
 		});
 
