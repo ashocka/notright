@@ -1,4 +1,4 @@
-@import url('theme-blessed1.css?z=1544121703928');
+@import url('theme-blessed1.css?z=1544190908203');
 
 
 .sticky,
@@ -149,10 +149,29 @@ h5 {
   font-family: "Source Code Pro", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
 
 .reporting-module-container {
-  background-color: #FDFDFD;
-  padding: 0 0 3rem; }
+  background-color: #f1f1f1;
+  padding: 0 0 3rem;
+  overflow: hidden; }
+  .reporting-module-container .open-more {
+    z-index: 999;
+    display: block;
+    position: absolute;
+    margin: 6rem auto;
+    left: 50%;
+    margin-left: -10px;
+    cursor: pointer; }
   .reporting-module-container .reporting-module {
     padding-top: 3rem; }
+    .reporting-module-container .reporting-module h2 {
+      margin-top: 0; }
+  .reporting-module-container .reporting-module-gradient {
+    background-image: linear-gradient(to bottom, #ffffff00, #ffffffa6, white);
+    width: 100%;
+    content: " ";
+    height: 9rem;
+    background-color: transparent;
+    position: absolute;
+    z-index: 99; }
 
 select {
   border: 0;
@@ -176,9 +195,17 @@ select {
 
 .solution .entry-header {
   padding: 3rem; }
+  .solution .entry-header h2 {
+    margin: 0; }
 
 .solution .entry-content {
   padding: 3rem; }
+
+.solution .privacy-level {
+  text-align: center;
+  line-height: 1; }
+  .solution .privacy-level div {
+    margin-top: 10px; }
 
 #content .entry-content {
   margin-bottom: 3rem; }

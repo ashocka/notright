@@ -49,8 +49,8 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
 <div class="container">
 		<div class="reporting-module-container">
-			<div class="reporting-module-gradient">
 			<a class="open-more" href="javascript:;">Več</a>
+			<div class="reporting-module-gradient">
 			</div>
 				<div class="reporting-module row justify-content-center">
 					<div class="col-10 col-md-5">
@@ -145,51 +145,6 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
 </main><!-- #main -->
 	</div><!-- Container end -->
-
-<style>
-.reporting-module-container {
-	height: 2rem;
-	overflow: hidden;
-}
-.reporting-module-gradient {
-	background-image: linear-gradient(to bottom, #ffffff00 , #ffffff, white);
-    width: 100%;
-    content: " ";
-    height: 150px;
-    background-color: transparent;
-    position: absolute;
-    z-index: 99;
-}
-.reporting-module-gradient .open-more {
-	position: absolute;
-	text-align: center;
-}
-</style>
-
-<script>
-jQuery(document).ready(function( $ ) {
-
-	$('.reporting-module-container').animate({
-    height: $('.reporting-module-container').get(0).scrollHeight
-}, 1000, function(){
-    $(this).height('auto');
-});
-
-	/*$('.open-more').click(function(){
-		$('.reporting-module-container').animate({
-				max-height: '200rem'
-			}, 1000);
-		$('.reporting-module-gradient').animate({
-			opacity: 0
-		}, 200, function() {
-    		$('.reporting-module-container').animate({
-				height: 'auto'
-			}, 300);
-  		});*/
-	});
-});
-</script>
-
 
 </div>
 

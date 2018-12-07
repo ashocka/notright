@@ -37,27 +37,35 @@ if ( ! defined( 'ABSPATH' ) ) {
 >
 
 	<header class="entry-header bg-primary">
+<div class="row">
+		<div class="nr_name col-8">
+			<?php the_title( '<h2>', '</h2>' ); ?>
+			<span><?php the_field('kontakt'); ?></span>
+		</div>
 
-		<?php the_title( '<h2>', '</h2>' ); ?>
-		<span><?php the_field('kontakt'); ?></span>
-
-		<div class="privacy-level">
+		<div class="privacy-level col-4">
 			<?php
 			if (get_field('nivo_zasebnosti')){
 				$a;
+				$b;
 
 				if (get_field('nivo_zasebnosti')=='javno') {
 					$a = "javno";
+					$b = "javna obravnava";
 				} elseif (get_field('nivo_zasebnosti')=='anonimno') {
 					$a = "anon";
-				} elseif (get_field('nivo_zasebnosti')=='zasebno') {
-					$a = "zasebno";
+					$b = "možnost anonimne prijave";
+				} elseif (get_field('nivo_zasebnosti')=='zaupno') {
+					$a = "zaupno";
+					$b = "zaupna obravnava";
 				};
 
 				echo "<img src='" . get_stylesheet_directory_uri() . "/img/ico-" . $a . ".svg' />";
+				echo "<div>". $b ."</div>";
 			}	
 			?>
 		</div>
+</div>
 
 	</header><!-- .entry-header -->
 

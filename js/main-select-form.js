@@ -124,7 +124,21 @@ $(".wpcf7-form").find(".wpcf7-submit").click(function(){
 	sessionStorage.setItem("reportIds", reportId);
 });
 
+	// the basic show of the form (hidden on load)
+	var heightOfReport = $('.reporting-module-container').height() + 48;
+	$('.reporting-module-container').css('height', '9rem');
 
+
+	$('.open-more').click(function(){
+		$(this).hide();
+		$('.reporting-module-gradient').animate({
+			opacity: 0
+			}, 100, function(){
+			$('.reporting-module-container').animate({
+				height: heightOfReport
+			}, 400);
+		});
+	});
 
 
 });
