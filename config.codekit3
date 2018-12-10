@@ -257,6 +257,92 @@
 		"oAP": "/header.php",
 		"oF": 0
 		},
+	"/img/favicon/android-chrome-96x96.png": {
+		"ft": 32768,
+		"iS": 3733,
+		"oA": 0,
+		"oAP": "/img/favicon/android-chrome-96x96.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/img/favicon/apple-touch-icon.png": {
+		"ft": 32768,
+		"iS": 4955,
+		"oA": 0,
+		"oAP": "/img/favicon/apple-touch-icon.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/img/favicon/browserconfig.xml": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/img/favicon/browserconfig.xml",
+		"oF": 0
+		},
+	"/img/favicon/favicon-16x16.png": {
+		"ft": 32768,
+		"iS": 1353,
+		"oA": 0,
+		"oAP": "/img/favicon/favicon-16x16.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/img/favicon/favicon-32x32.png": {
+		"ft": 32768,
+		"iS": 1779,
+		"oA": 0,
+		"oAP": "/img/favicon/favicon-32x32.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/img/favicon/favicon.ico": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/img/favicon/favicon.ico",
+		"oF": 0
+		},
+	"/img/favicon/mstile-150x150.png": {
+		"ft": 32768,
+		"iS": 5061,
+		"oA": 0,
+		"oAP": "/img/favicon/mstile-150x150.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/img/favicon/safari-pinned-tab.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/img/favicon/safari-pinned-tab.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/img/favicon/site.webmanifest": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "/img/favicon/site.webmanifest",
+		"oF": 0
+		},
 	"/img/footer-top.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -282,6 +368,16 @@
 		"miP": 0,
 		"oA": 2,
 		"oAP": "/img/ico-anon_.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/img/ico-anon_b.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/img/ico-anon_b.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
@@ -317,6 +413,16 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
+	"/img/ico-zaupno_b.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/img/ico-zaupno_b.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
 	"/img/illustration-front-page-01.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -332,6 +438,27 @@
 		"miP": 0,
 		"oA": 2,
 		"oAP": "/img/illustration-front-page-02.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"/img/share.png": {
+		"ft": 32768,
+		"iS": 11080,
+		"oA": 0,
+		"oAP": "/img/share.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/img/Triangle.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/img/Triangle.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
@@ -2622,7 +2749,7 @@
 	"creationDate": 565525625.33181906,
 	"displayValue": "notright",
 	"displayValueWasSetByUser": 0,
-	"iconImageName": "meme-jake",
+	"iconImageName": "/img/favicon/apple-touch-icon.png",
 	"iconImageWasSetByUser": 0
 	},
 "projectSettings": {

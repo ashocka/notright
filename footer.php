@@ -18,12 +18,12 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 <div class="wrapper bg-primary" id="wrapper-footer">
 
-	<div class="<?php echo esc_attr( $container ); ?>">
+
 
 		
 
-				<footer class="row" id="colophon">
-
+				<footer class="container" id="colophon">
+<div class="row">
 					<div class="site-info col-12 col-sm-4">
 
 						<?php if ( ! has_custom_logo() ) { ?>
@@ -43,19 +43,17 @@ $container = get_theme_mod( 'understrap_container_type' );
 						the_custom_logo();
 					} ?><!-- end custom logo -->
 
-
+					<?php dynamic_sidebar( 'author_logo' ); ?>
 
 					</div><!-- .site-info -->
 
 					<div class="col-sm-8 col-12 partner-logos">
-						<img src="" title="ONE logo" />
-						<img src="" title="and this" />
-						<img src="" title="also this" />
+						<?php dynamic_sidebar( 'footer_widget_area' ); ?>
 					</div>
-
+</div>
 				</footer><!-- #colophon -->
 
-	</div><!-- container end -->
+
 
 </div><!-- wrapper end -->
 

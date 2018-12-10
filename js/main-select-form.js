@@ -48,10 +48,11 @@ jQuery(document).ready(function( $ ) {
 // filtering functionality (this only works if all attributes accross all dropdowns are different)
 
     var selected = [];
-    	$(".nr_solutions").hide();
+
+    $(".solution").hide();
 
     $("select").change(function() {
-    	$(".nr_solutions").hide();
+    	$(".solution").hide();
 
     // get all selected values together
 	selected = [];
@@ -97,7 +98,7 @@ jQuery(document).ready(function( $ ) {
 			var result = superbag(allAttributes, selected);
 
 			if (result === true) {
-				$(this).show();
+				$(this).parent().show();
 			}
 
 			$(".reporting-module-container").show();
@@ -109,36 +110,71 @@ jQuery(document).ready(function( $ ) {
 
    	});
 
+	//relationship toggle
+	$('.relationship').click(function(){
+		$(this).toggleClass('selected');
+		$(this).siblings().toggleClass('selected');
+	});
+
 // reporting functionality
 
 $(".wpcf7-form").find(".wpcf7-submit").click(function(){
-	console.log(selected);
 
 	// not the best: same number could be generated twice
 	// try adding current time
 	var reportId = Math.floor(Math.random() * (999999-100000) + 100000);
 
-	$("#hidden-context").val(selected);
+	//TODO: write and display submitted values on 2d step
+	var thecontext = $('#context').val();
+	var themethod = $('#method').val();
+	var thebias = $('#bias').val();
+	var therelationship = $('.relationship.selected').attr('id');
+
+	$("#hidden-context").val(thecontext);
+	$("#hidden-method").val(themethod);
+	$("#hidden-bias").val(thebias);	
+	$("#hidden-relationship").val(therelationship);	
+
 	$("#hidden-reportid").val(reportId);
 
+	
 	sessionStorage.setItem("reportIds", reportId);
+	sessionStorage.setItem("submitted",
+		thecontext + '<br />' +
+		themethod + '<br />' +
+		thebias
+		);
 });
 
-	// the basic show of the form (hidden on load)
-	var heightOfReport = $('.reporting-module-container').height() + 48;
+	// the basic show of the report form (hidden on load)
+	var heightOfReport = $('.reporting-module-container').height()-32;
 	$('.reporting-module-container').css('height', '9rem');
 
 
-	$('.open-more').click(function(){
-		$(this).hide();
-		$('.reporting-module-gradient').animate({
-			opacity: 0
-			}, 100, function(){
-			$('.reporting-module-container').animate({
-				height: heightOfReport
-			}, 400);
-		});
+	$('.reporting-module-container').click(function(){
+		$('.open-more').hide();
+		$('.reporting-module-gradient').remove();
+
+		$(this).animate({
+			height: heightOfReport
+			}, 400, function(){});
+
 	});
 
+	// only show contact field if help needed
+	$('#contact').parent().parent().hide();
+	$('.privacy-notice .zaupno').hide();
+
+	$('#help input').click(function(){
+		if ($('#help input').is(':checked')) {
+			$('#contact').parent().parent().show();
+			$('.privacy-notice .zaupno').show();
+			$('.privacy-notice .anon').hide();
+		} else {
+			$('#contact').parent().parent().hide();
+			$('.privacy-notice .anon').show();
+			$('.privacy-notice .zaupno').hide();
+		}
+	});
 
 });

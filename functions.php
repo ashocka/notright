@@ -59,3 +59,27 @@ function nr_submitted_info_shortcode() {
    echo '<div class="submitted-info"></div>';
 }
 add_shortcode( 'submitted', 'nr_submitted_info_shortcode' );
+
+// add the footer widget area
+
+function add_widget_area() {
+	register_sidebar( array(
+		'name'          => 'Footer Widget Area',
+		'id'            => 'footer_widget_area',
+		'before_widget' => '<div>',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2 class="rounded">',
+		'after_title'   => '</h2>',
+	) );
+
+	register_sidebar( array(
+		'name'          => 'Author Logo',
+		'id'            => 'author_logo',
+		'before_widget' => '<div class="author-logo">',
+		'after_widget'  => '</div>',
+	) );
+
+}
+add_action( 'widgets_init', 'add_widget_area' );
+
+add_filter( ‘wpcf7_remote_ip_addr’, ‘wpcf7_anonymize_ip_addr’ );

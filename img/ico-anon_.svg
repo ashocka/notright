@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="23px" height="30px" viewBox="0 0 23 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="30px" height="41px" viewBox="0 0 30 41" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
-    <title>Fill 6</title>
+    <title>Fill 8</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
     <g id="style" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <path d="M21.1093838,14.4076841 L22.7102376,14.4076841 L22.7102376,28.303095 L0.6398,30 L0.6398,13.3404482 L2.96637417,13.3404482 L2.96637417,6.1846318 L13.1051148,0 L21.1093838,6.1846318 L21.1093838,14.4076841 Z M17.9130124,14.3810032 L18.1157872,8.00426894 L13.1051148,3.73532551 L6.14140085,7.47065101 L6.24812444,13.4839915 L17.9130124,14.3810032 Z M8.53734536,24.8719317 L15.1915609,24.8719317 L12.4807819,19.8452508 L14.2102376,17.945571 L11.4882525,16.6163287 L9.01226531,18.1323372 L10.9919878,19.8452508 L8.53734536,24.8719317 Z" id="Fill-6" fill="#FFFFFF"></path>
+        <polygon id="Fill-8" fill="#FFFFFF" points="14.0430007 0 7.4992033 7.40678578 11.0690688 18.6632391 1.39008689 20.887633 0 39.4125645 30 40.7911789 29.9496484 24.562026 19.8423591 18.6861841 25.2688606 8.12891712 20.5664025 0.0178461408"></polygon>
     </g>
 </svg>

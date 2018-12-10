@@ -34,7 +34,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
 					<select id="context" autofocus>
 						<option value="" selected="selected">Izberite kontekst</option>
 					</select>
-					sem bil_a žrtev/očividka_ec
+					sem bil_a <a class="relationship selected" id="victim" href="javascript:;">žrtev</a>/<a class="relationship" id="eyewitness" href="javascript:;">očividka_ec</a>
 					<select id="method">
 						<option value="" selected="selected">Izberite metodo</option>
 					</select>
@@ -49,15 +49,16 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
 <div class="container">
 		<div class="reporting-module-container">
-			<a class="open-more" href="javascript:;">Več</a>
+			<a class="open-more" href="javascript:;">Prikaži obrazec za prijavo</a>
 			<div class="reporting-module-gradient">
 			</div>
 				<div class="reporting-module row justify-content-center">
 					<div class="col-10 col-md-5">
-					<h2>Report</h2>
-					<p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</p>
-					<p>
-					Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					<h2>Javite na Legebitro</h2>
+					<p>Vaša prijava zločina iz sovraštva in diskriminacije omogoča zbiranje podatkov, s katerimi lahko dosežemo spremembe v zakonodaji in pravilnikih.</p>
+					<p>Vaša prijava je lahko povsem anonimna, lahko pa vam ponudimo podporo v nadaljnjem prijavnem procesu.</p>
+					<p>Prijava na Legebitro ne pomeni avtomatične prijave na policijo.
+					</p>
 					</div>
 					<div class="col-10 col-md-4 offset-md-1">
 			<?php
@@ -66,12 +67,25 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
 			echo "<script>
 						document.addEventListener( 'wpcf7mailsent', function( event ) {
-						    location = '" . get_site_url() . "/report-step-2';
+						    location = '" . get_site_url() . "/dopolnitev-prijave';
 						}, false );
 					</script>";
 			?>
 						<div class="privacy-notice smol">
+							<div class="anon">
+							<?php echo "<img src='";
+									echo get_stylesheet_directory_uri();
+									echo "/img/ico-anon_b.svg' class='' title='ikona za nivo zasebnosti: anonimno' />";
+									?>
 							<p>Poslali boste anonimne informacije o dogodku. Zabeležili bomo tudi vašo izbiro v zgornjem obrazcu (prostor, metoda, bias).</p>
+							</div>
+							<div class="zaupno">
+							<?php echo "<img src='";
+									echo get_stylesheet_directory_uri();
+									echo "/img/ico-zaupno_b.svg' class='' title='ikona za nivo zasebnosti: zaupno' />";
+									?>
+							<p>Poslali boste informacije o dogodku in svoje kontaktne informacije. Zabeležili bomo tudi vašo izbiro v zgornjem obrazcu (prostor, metoda, bias).</p>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -151,7 +165,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
 </div><!-- Wrapper end -->
 
 <?php echo "<script type='text/javascript' src='";
-	//echo get_stylesheet_directory_uri();
+	echo get_stylesheet_directory_uri();
 	echo "/js/main-select-form.js'></script>";
 ?>
 

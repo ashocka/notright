@@ -24,6 +24,17 @@ $container = get_theme_mod( 'understrap_container_type' );
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 	<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:700|Source+Sans+Pro:400,700&amp;subset=latin-ext" rel="stylesheet">
+
+	<link rel="apple-touch-icon" sizes="120x120" href="<?php echo get_stylesheet_directory_uri(); ?>/img/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="<?php echo get_stylesheet_directory_uri(); ?>/img/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="<?php echo get_stylesheet_directory_uri(); ?>/img/favicon/favicon-16x16.png">
+<link rel="manifest" href="<?php echo get_stylesheet_directory_uri(); ?>/img/favicon/site.webmanifest">
+<link rel="mask-icon" href="<?php echo get_stylesheet_directory_uri(); ?>/img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+<meta name='og:image' content='<?php echo get_stylesheet_directory_uri(); ?>/img/share.png'>
+
+
 	<?php wp_head(); ?>
 </head>
 
@@ -32,9 +43,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 <div class="site" id="page">
 	<div class="container privacy-top-notice smol bg-primary">
 		<div class="row justify-content-center">
-			<div class="col-1 col-sm-1"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/ico-anon_.svg" title="nivo privatnosti" /></div>
-			<div class="col-10 col-sm-6">
-			Uporaba te spletne strani je anonimna. Zbiramo anonimno statistiko o uporabi. Noben osebni podatek se ne shranjuje, razen, če se za to izrecno odločite.
+			<div class="col-2 col-sm-1"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/ico-anon_.svg" title="nivo privatnosti" /></div>
+			<div class="col-9 col-sm-6">
+			Uporaba te spletne strani je anonimna. Noben osebno določljiv podatek se ne shranjuje, razen, če se za to izrecno odločite.
 			</div>
 			<div class="col-11 col-sm-3"><a href="#">Preberite več o tem, kako skrbimo za podatke</a></div>
 		</div>

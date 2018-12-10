@@ -84,6 +84,15 @@ h5 {
 	font-family: $font-family-monospace;
 }
 
+a.relationship {
+	color: lighten($primary, 30%);
+	text-decoration:none;
+}
+
+a.relationship.selected {
+	color:$white;
+}
+
 .reporting-module-container {
 	background-color: #f1f1f1;
 	padding: 0 0 3rem;
@@ -95,8 +104,11 @@ h5 {
 		    position: absolute;
 		    margin: 6rem auto;
 		    left: 50%;
-		    margin-left: -10px;
+		    margin-left: -87px;
 		    cursor: pointer;
+		    padding: 5px 10px;
+    		border: 1px solid black;
+    		border-radius: 5px;
 		}
 
 	.reporting-module {
@@ -105,16 +117,25 @@ h5 {
 		h2 {
 			margin-top:0;
 		}
+
+		span.wpcf7-list-item {
+			margin:0;
+		}
 	}
 
 	.reporting-module-gradient {
 		background-image: linear-gradient(to bottom, #ffffff00 , #ffffffa6, white);
 	    width: 100%;
 	    content: " ";
-	    height: 9rem;
+	    height: 10rem;
 	    background-color: transparent;
 	    position: absolute;
 	    z-index: 99;
+	}
+
+	.privacy-notice p {
+		float: right;
+    	width: 85%;
 	}
 }
 
@@ -130,6 +151,13 @@ select {
 .main-select-form select{
 	color: $white;
 	border-bottom: 3px solid $white;
+
+	
+		background-image:url("../img/triangle.svg");
+		background-repeat: no-repeat;
+		background-position:right 32px;
+		padding-right: 20px;
+	
 }
 
 .wpcf7-submit {
@@ -179,7 +207,16 @@ select {
 #wrapper-footer {
 	margin-top: 9rem;
 
-	.container {
+	.author-logo {
+		margin-top: 3rem;
+    	margin-bottom: 5rem;
+	}
+
+	.partner-logos {
+
+	}
+
+	.container .row {
 		padding:10rem 0 6rem;
 	}
 
@@ -210,6 +247,10 @@ select {
 	}
 }
 
+.wp-block-image figcaption {
+	color:$primary;
+}
+
 // illustrations on the front page
 .front-ilustration-01 {
 	margin-top:-6rem;
@@ -221,6 +262,15 @@ select {
 
 }
 
+
+// why doesn't it read this at all???
+.wpcf7 input[type="submit"] {
+	background: $purple !important;
+	border-radius: 3px;
+	color: $white;
+	box-shadow: 0px 3px #484848;
+}
+
 //non mobile overrides
 
 @include media-breakpoint-up(sm) { // sm(mobile) and larger
@@ -229,6 +279,12 @@ select {
 	}
 }
 
+// override Gutenberg
+@media (min-width: 600px){
+	.wp-block-column:last-child {
+		margin-right:0 !important;
+	}
+}
 
 
 
