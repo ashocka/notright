@@ -1,4 +1,4 @@
-@import url('theme-blessed1.css?z=1544722742323');
+@import url('theme-blessed1.css?z=1544723263028');
 
 
 .sticky,
@@ -281,8 +281,8 @@ select {
     margin-right: 0 !important; } }
 
 option {
-  background: #000;
-  background-color: black; }
+  background: #333;
+  background-color: #333; }
 
 /*
 * Use existing Bootstrap 4 classes and
