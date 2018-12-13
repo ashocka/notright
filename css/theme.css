@@ -1,4 +1,4 @@
-@import url('theme-blessed1.css?z=1544453520063');
+@import url('theme-blessed1.css?z=1544722742323');
 
 
 .sticky,
@@ -84,9 +84,6 @@ a.skip-link {
 
 .navbar h1 {
   font-weight: 400; }
-
-.red {
-  background-color: red; }
 
 html, body {
   max-width: 100%;
@@ -282,6 +279,10 @@ select {
 @media (min-width: 600px) {
   .wp-block-column:last-child {
     margin-right: 0 !important; } }
+
+option {
+  background: #000;
+  background-color: black; }
 
 /*
 * Use existing Bootstrap 4 classes and

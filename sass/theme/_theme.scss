@@ -1,9 +1,5 @@
 // This is an empty scss file for your custom styles - Please add your super duper awesome mega design styles here
 
-//development
-.red {
-	background-color:red;
-}
 
 html, body {
     max-width: 100%;
@@ -286,6 +282,10 @@ select {
 	}
 }
 
+option{
+  background: #000;
+  background-color: rgba(0, 0, 0, 1);
+}
 
 
 

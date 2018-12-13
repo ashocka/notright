@@ -47,7 +47,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 			<div class="col-9 col-sm-6">
 			Uporaba te spletne strani je anonimna. Noben osebno določljiv podatek se ne shranjuje, razen, če se za to izrecno odločite.
 			</div>
-			<div class="col-11 col-sm-3"><a href="#">Preberite več o tem, kako skrbimo za podatke</a></div>
+			<div class="col-11 col-sm-3"><a href="/izjava-o-zasebnosti/">Preberite več o tem, kako skrbimo za podatke</a></div>
 		</div>
 	</div>
 
